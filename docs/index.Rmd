@@ -1,0 +1,27 @@
+---
+title: "Introduction to R"
+author:
+- name: Kauê de Sousa, PhD
+  affiliation: Department of Agricultural Sciences, Høgskolen i Innlandet, Hamar, Norway <br> Digital Inclusion, Alliance of Bioversity International and CIAT, Rome, Italy
+output: html_document
+---
+
+-----
+
+Welcome to "Introduction to R". The aim is that you learn the principles of R software for data management and analysis.  
+
+These are the topics that we are going to study 
+
+1. [Project-oriented workflow](01_project_oriented_workflow.html) 
+2. [Introduction to R](02_introduction_to_R.html) 
+
+### Classroom materials
+
+Click [here]() to download the classroom materials. This is a .zip file with the project data inside it. Unzip the file and put it in the directory of your preference.
+
+-----
+
+<center>
+<img src="img/inn-uni.png" width="10%"/>
+</center>
+
