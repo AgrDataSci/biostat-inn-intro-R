@@ -1,4 +1,4 @@
-
+library("tidyverse")
 
 list.files("data")
 
@@ -6,7 +6,8 @@ dt <- read.csv("data/drug_variants.csv")
 
 dt
 
-boxplot(dt$Value ~ dt$Group, 
+boxplot(Value ~ Group, 
+        data = dt,
         xlab = "Group",
         ylab = "Value")
 
@@ -24,8 +25,6 @@ dts <- lapply(dts, function(x){
 
 dts <- do.call(rbind, dts)
 
-library("tidyverse")
-
 dt %>% 
   group_by(Group) %>% 
   summarise(mean = mean(Value),
@@ -35,8 +34,10 @@ dt %>%
             sd = sd(Value))
 
 
-my_aov <- with(dt, 
-               aov(Value ~ Group))
+mod <- with(dt, 
+            lm(Value ~ Group))
 
+anova(mod)
 
-summary(my_aov)
+summary(mod)
+
