@@ -28,6 +28,7 @@ htmltools::tagList(
 # Content
 
 * R
+* What we can do with R
 * Data structures
 * Creating objects and assigning values
 * Indexing
@@ -43,14 +44,6 @@ class: middle, inverse
 # R
 
 A free, open source programming language and software environment for statistical computing and graphics
-
-Software for data science:
-
-* experiment/survey design
-* data retrieval
-* data wrangling
-* data analysis
-* reporting
 
 A programming language, so we can
 
@@ -87,6 +80,61 @@ An integrated development environment for R
 .footnote[
 [1] [Click here to download RStudio](https://rstudio.com/products/rstudio/download/)]
 
+---
+class: middle, inverse
+# What we can do with R
+
+---
+
+# Software for data science 
+
+- data retrieval
+- data extraction
+- data wrangling
+- workflow automation
+- citation management and bibliometrics
+- field and lab reproducibility tools
+- geospatial analysis 
+- text analysis
+- reporting
+
+[CRAN task views](https://cran.r-project.org/web/views/) lists the most important R packages by topics.
+
+---
+
+# Geospatial analysis 
+
+Some important spatial packages are rgeos, sf, sp, raster, terra, leaflet, gdistance, rgdal, maptools, and much more [here](https://cran.r-project.org/web/views/Spatial.html).
+
+<center>
+<img src="img/vegetables-in-europe.png" width="50%"/>
+<center/>
+
+.footnote[
+[1] [de Sousa and Solberg (2020)](https://doi.org/10.3390/agriculture10080340)]
+
+---
+
+# Workflow automation
+
+.pull-left[
+<img src="img/workflow.png" width="120%"/>
+]
+
+.pull-right[
+<img src="img/r-packages.png" width="80%"/>
+]
+
+---
+# Reporting
+
+Excellent to right scientific papers, books, slides, thesis and reports when you write text along with R code and equations. 
+
+Some important packages are knitr and rmarkdown.
+
+<center>
+<img src="img/joss-chirps.png" width="50%"/>
+<center/>
 
 ---
 class: middle, inverse
