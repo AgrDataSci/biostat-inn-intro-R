@@ -15,9 +15,6 @@ These are the topics that we are going to study
 1. [Project-oriented workflow](01_project_oriented_workflow.html) 
 2. [Introduction to R](02_introduction_to_R.html) 
 
-### Classroom materials
-
-Click [here]() to download the classroom materials. This is a .zip file with the project data inside it. Unzip the file and put it in the directory of your preference.
 
 -----
 
