@@ -2,18 +2,29 @@ library("tidyverse")
 
 list.files("data")
 
-dt <- read.csv("data/drug_variants.csv")
+# read the file 
+dat <- read.csv("data/drug_variants.csv")
 
-dt
+dat
 
+str(dat)
+
+# boxplot using base R
 boxplot(Value ~ Group, 
-        data = dt,
+        data = dat,
         xlab = "Group",
         ylab = "Value")
 
-dts <- split(dt, dt$Group)
 
-dts <- lapply(dts, function(x){
+# density plot using ggplot2
+ggplot(data = dat, aes(x = Value, group = Group, fill = Group)) +
+  geom_density(adjust=1.5, alpha=.4) +
+  theme_bw()
+
+# data summary using base R
+datS <- split(dat, dat$Group)
+
+datS <- lapply(datS, function(x){
   data.frame(group = x$Group[1],
              count = length(x$Value),
              sum  = sum(x$Value),
@@ -23,9 +34,12 @@ dts <- lapply(dts, function(x){
 })
 
 
-dts <- do.call(rbind, dts)
+datS <- do.call(rbind, datS)
 
-dt %>% 
+datS
+
+# same but using tidyverse
+dat %>% 
   group_by(Group) %>% 
   summarise(mean = mean(Value),
             count = length(Value),
@@ -33,8 +47,8 @@ dt %>%
             variance = var(Value),
             sd = sd(Value))
 
-
-mod <- with(dt, 
+# lets run an anova
+mod <- with(dat, 
             lm(Value ~ Group))
 
 anova(mod)

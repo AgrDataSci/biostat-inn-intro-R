@@ -1,8 +1,8 @@
 ---
 title: "Introduction to R"
 author:
-- name: Kauê de Sousa, PhD
-  affiliation: Department of Agricultural Sciences, Høgskolen i Innlandet, Hamar, Norway <br> Digital Inclusion, Alliance of Bioversity International and CIAT, Rome, Italy
+- name: Kauê de Sousa, Ph.D.
+  affiliation: Department of Agricultural Sciences, Høgskolen i Innlandet, Hamar, Norway <br> Digital Inclusion, Bioversity International, Montpellier, France
 output: html_document
 ---
 
@@ -12,9 +12,8 @@ Welcome to "Introduction to R". The aim is that you learn the principles of R so
 
 These are the topics that we are going to study 
 
-1. [Project-oriented workflow](01_project_oriented_workflow.html) 
-2. [Introduction to R](02_introduction_to_R.html) 
-
+1. [Introduction to R](01_introduction_to_R.html) 
+2. [Project-oriented workflow](02_project_oriented_workflow.html) 
 
 -----
 
