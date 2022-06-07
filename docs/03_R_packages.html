@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R Packages</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Kauê de Sousa" />
+    <meta name="date" content="2022-01-01" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"<i class=\"fa fa-times-circle\" style=\"color: #F94144\"><\/i>"})</script>
+    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# R Packages
+### Kauê de Sousa
+### 2022
+
+---
+
+
+
+
+# Content
+
+* R packages
+* Types of packages
+* How it starts?
+* Should I publish my R package?
+* Tips to write your package
+* Tips to publish your package
+
+---
+class: middle, inverse
+# R packages
+---
+# R packages
+
+A collection of functions, complied code and sample data. They are stored under a directory called "library" in the R environment
+
+Most day-to-day work will require at least one contributed package.
+
+The Comprehensive R Archive Network [(CRAN)](https://cran.r-project.org/) is where most of the packages are
+
+To install a package from CRAN we use the function `install.packages()`
+
+
+```r
+install.packages("terra")
+```
+
+---
+# R packages
+
+Develop a R package is often an ongoing project. Once a package's version is stable enough, the developer publishes it on CRAN. 
+
+Currently, most R packages under development are deposited on [GitHub](https://github.com/). To install a developing version from GitHub we use the function `install_github()` from the R package "remotes"
+
+
+```r
+install.packages("remotes")
+remotes::install_github("r-spatial/sf")
+```
+
+---
+# Types of packages
+
+There are many types of R packages, these packages are better sorted in the [CRAN Task Views](https://cran.r-project.org/web/views/)
+
+* Data munging (Missing data) `tidyr`, `gapfill`, ...
+
+* Spatial `sf`,  `terra`,  `maptools`, ...
+
+* Machine Learning `rpart`, `party`, `randomForest`, ...
+
+* API Client (Data retrieval) `nasapower`, `chirps`, `rgbif`, ...
+
+---
+# How it starts
+
+A package could start by identifying a need or gap in the community. 
+
+* The R packages `sp` (in 2005) and `raster` (2010) where developed to fill the gap in the community and changed the way we do open-source spatial analysis. 
+
+* The package `data.table` (in 2006) was developed to solve a computational issue in R to handle large files, it saved R from extinction.
+
+* The package `sf` (in 2016) and `terra` (in 2020) were developed to modernize spatial tools in R. A demand from The R Project.
+
+---
+# How it starts
+
+Another way is by time. When you run a chunk of code...
+
+* More than once in one script within a project, you write a loop
+
+
+* More than once in multiple scripts within a project, you write a function
+
+
+* Across multiple projects, you write a package
+
+
+The idea is to have a better sense of your code, and a easier way to find bugs. Some packages are only used within the research group or lab
+
+---
+# Should I publish my R package?
+
+Before offering your R package to the community, consider these things
+
+* Do you know your audience? Who does the package serve? Is there a wider user other than your lab?
+
+* Is your code well documented and tested? 
+
+* Are you willing to maintain it?
+
+* Have you checked if there is a similar project out there?
+
+---
+# Tips to write your package
+
+* Use roxygen2, this will make your life really easy 
+
+* Vectorize your functions. Start simple and write tests right away
+
+* Document the functions with good examples and toy data
+
+* Check other packages structures
+
+* Use Git as tracking changes software
+
+* Use a deploy service (e.g. Travis, Git Actions)
+
+---
+# Tips to publish your package
+
+* Start with a good vignette 
+
+* Some journals accept methodological or software papers
+
+* Specialized journals are Journal of Open Source Software (JOSS), Journal of Statistical Software
+
+* Accept software papers Methods in Ecology and Evolution, Crop Science
+
+---
+# Further reading and learning
+
+
+&lt;center&gt;
+&lt;img src="img/r-packages-book.png" width="65%"/&gt;
+&lt;/center&gt;
+
+.footnote[
+[1] [Wickham (2015)](https://r-pkgs.org/index.html)]
+
+
+---
+
+# **Thank you!**
+
+.pull-left[
+&lt;img src="img/inn-uni.png" width="30%"/&gt;
+]
+
+.pull-right[
+
+&lt;img src="https://img.icons8.com/color/64/000000/twitter.png" width = "10%"&gt;[@desousakaue](https://twitter.com/desousakaue)
+
+&lt;img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" width = "10%"&gt;[kaue.desousa@inn.no](mailto:k.desousa@cgiar.org)
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+[Back to the main page](index.html) 
+
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
