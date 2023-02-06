@@ -1,4 +1,4 @@
-
+library("ggplot2")
 
 list.files("data")
 
@@ -9,17 +9,26 @@ boxplot(Yield ~ Rice:Temperature,
         xlab = "Rice x Temperature",
         ylab = "Yield")
 
+
+boxplot(Yield ~ Rice,
+        data = dat,
+        xlab = "Rice",
+        ylab = "Yield")
+
 dat
 
-ggplot(data = dat, aes(x = Yield, group = Rice, fill = Rice, color = Rice)) +
-  geom_density(adjust=1.5, alpha=.4) +
-  theme_bw()
+ggplot(data = dat, 
+       aes(x = Yield, 
+           group = Rice, 
+           fill = Rice,
+           color = Rice)) +
+  geom_density(adjust = 1.5, alpha = 0.4) +
+  theme_classic()
 
-mod <- with(dat,
-            lm(Yield ~ Rice + Temperature + Rice:Temperature))
-
-anova(mod)
+mod <- lm(Yield ~ Rice + Temperature, data = dat)
 
 summary(mod)
+
+anova(mod)
 
 

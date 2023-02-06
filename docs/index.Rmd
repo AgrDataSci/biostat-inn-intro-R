@@ -14,6 +14,7 @@ These are the topics that we are going to study
 
 1. [Introduction to R](01_introduction_to_R.html) 
 2. [Project-oriented workflow](02_project_oriented_workflow.html) 
+3. [R Packages](03_R_packages.html) 
 
 -----
 
