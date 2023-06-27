@@ -102,7 +102,7 @@ Another way is by time. When you run a chunk of code...
 * Across multiple projects, you write a package
 
 
-The idea is to have a better sense of your code, and a easier way to find bugs. Some packages are only used within the research group or lab
+The idea is to have a better sense of your code, and an easier way to find bugs. Some packages are only used within the research group or lab
 
 ---
 # Should I publish my R package?
@@ -161,20 +161,11 @@ Before offering your R package to the community, consider these things
 
 # **Thank you!**
 
-.pull-left[
-<img src="img/inn-uni.png" width="30%"/>
-]
-
 .pull-right[
 
-<img src="https://img.icons8.com/color/64/000000/twitter.png" width = "10%">[@desousakaue](https://twitter.com/desousakaue)
-
-<img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" width = "10%">[kaue.desousa@inn.no](mailto:k.desousa@cgiar.org)
+<img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" width = "10%">[k.desousa@cgiar.org](mailto:k.desousa@cgiar.org)
 
 <br><br><br><br><br><br><br><br><br><br>
 
-[Back to the main page](index.html) 
-
+[Back to the main page](index.html)
 ]
-
-

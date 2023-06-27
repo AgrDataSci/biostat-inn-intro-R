@@ -106,20 +106,13 @@ Is a context for work on a specific project for data analysis
 
 # **Thank you!**
 
-.pull-left[
-<img src="img/inn-uni.png" width="30%"/>
-]
-
 .pull-right[
 
-<img src="https://img.icons8.com/color/64/000000/twitter.png" width = "10%">[@desousakaue](https://twitter.com/desousakaue)
-
-<img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" width = "10%">[kaue.desousa@inn.no](mailto:k.desousa@cgiar.org)
+<img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" width = "10%">[k.desousa@cgiar.org](mailto:k.desousa@cgiar.org)
 
 <br><br><br><br><br><br><br><br><br><br>
 
-[Back to the main page](index.html) 
-
+[Back to the main page](index.html)
 ]
 
 
