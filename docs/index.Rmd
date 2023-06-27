@@ -2,7 +2,7 @@
 title: "Introduction to R"
 author:
 - name: Kauê de Sousa, Ph.D.
-  affiliation: Department of Agricultural Sciences, Høgskolen i Innlandet, Hamar, Norway <br> Digital Inclusion, Bioversity International, Montpellier, France
+  affiliation: Digital Inclusion, Bioversity International, Montpellier, France
 output: html_document
 ---
 
@@ -19,6 +19,6 @@ These are the topics that we are going to study
 -----
 
 <center>
-<img src="img/inn-uni.png" width="10%"/>
+<img src="img/alliance-cgiar.png" width="30%"/>
 </center>
 
